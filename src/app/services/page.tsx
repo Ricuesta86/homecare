@@ -1,9 +1,11 @@
-import React from 'react'
+import { Services } from "@/components/sections/services";
 
-const Services = () => {
+const ServicesPage = () => {
   return (
-    <div>Services</div>
-  )
-}
+    <>
+      <Services />
+    </>
+  );
+};
 
-export default Services
+export default ServicesPage;
