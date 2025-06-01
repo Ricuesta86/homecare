@@ -31,9 +31,9 @@ const Navbar = () => {
   // Links de navegación
   const navLinks = [
     { name: "Inicio", path: "/" },
-    { name: "Servicios", path: "/servicios" },
-    { name: "Nosotros", path: "/nosotros" },
-    { name: "Testimonios", path: "/testimonios" },
+    { name: "Servicios", path: "/services" },
+    { name: "Nosotros", path: "/about" },
+    // { name: "Testimonios", path: "/testimonios" },
     { name: "Contacto", path: "/contacto" }
   ];
 
