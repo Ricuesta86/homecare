@@ -16,7 +16,7 @@ const HeroCarousel = () => {
       cta: "Agendar Evaluación",
       link: "/evaluacion-clinica",
       image: "/images/mental-evaluation.jpg",
-      bgColor: "bg-purple-50",
+      bgColor: "bg-blue-50",
       hook: "¿Preocupado por tu bienestar emocional? Nuestros psiquiatras certificados te ayudarán a entender lo que sucede."
     },
     {
@@ -36,7 +36,7 @@ const HeroCarousel = () => {
       cta: "Iniciar Terapia",
       link: "/counseling",
       image: "/images/mental-counseling.jpg",
-      bgColor: "bg-teal-50",
+      bgColor: "bg-blue-50",
       hook: "Hablar ayuda. Nuestro enfoque compasivo te brindará claridad y estrategias para sentirte mejor."
     },
     {
@@ -46,7 +46,7 @@ const HeroCarousel = () => {
       cta: "Consultar Opciones",
       link: "/manejo-medicacion",
       image: "/images/medication-mgmt.jpg",
-      bgColor: "bg-indigo-50",
+      bgColor: "bg-blue-50",
       hook: "¿Medicación que no funciona o efectos secundarios? Optimizamos tu tratamiento para mejores resultados."
     }
   ];
@@ -72,22 +72,19 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section className={`relative h-screen  max-h-[800px] overflow-hidden ${slides[currentSlide].bgColor} transition-colors duration-1000`}>
+    <section className={`relative h-[calc(100vh-4rem)] max-h-[700px] overflow-hidden ${slides[currentSlide].bgColor} transition-colors duration-1000`}>
       {/* Carrusel */}
       <div className="relative h-full w-full">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 flex items-center ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+            className={`absolute inset-16 transition-opacity duration-1000 flex items-center ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
           >
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                 {/* Contenido de texto */}
                 <div className="text-center md:text-left">
-                  <div className="max-w-2xl mx-auto md:mx-0">
-                    {/* <span className="inline-block px-3 py-1 text-sm font-semibold text-purple-700 bg-purple-100 rounded-full mb-4">
-                      Salud Mental Integral
-                    </span> */}
+                  <div className="max-w-2xl mx-auto md:mx-5">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                       {slide.title}
                     </h1>
@@ -120,7 +117,7 @@ const HeroCarousel = () => {
                     src={slide.image}
                     alt={slide.title}
                     fill
-                    className="object-contain object-center"
+                    className="rounded-lg shadow-xl w-auto h-auto object-cover"
                     priority={index === currentSlide}
                   />
                 </div>
@@ -147,7 +144,7 @@ const HeroCarousel = () => {
       </button>
 
       {/* Indicadores de paginación */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
