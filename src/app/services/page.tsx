@@ -1,9 +1,10 @@
-import { Services } from "@/components/sections/services";
+import MentalHealthServices from "@/components/sections/services";
+
 
 const ServicesPage = () => {
   return (
     <>
-      <Services />
+      <MentalHealthServices />
     </>
   );
 };
