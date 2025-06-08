@@ -1,4 +1,5 @@
 import AboutSection from "@/components/sections/about"
+import ContactSection from "@/components/sections/contact"
 // import { Hero } from "@/components/sections/hero"
 import HeroCarousel from "@/components/sections/hero-carrusel"
 import HomeCareServices from "@/components/sections/services"
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroCarousel />
       <HomeCareServices />
       <AboutSection />
+      <ContactSection />
       {/* <Testimonials />
       <CtaSection /> */}
     </main>
