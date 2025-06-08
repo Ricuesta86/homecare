@@ -1,7 +1,7 @@
 import AboutSection from "@/components/sections/about"
 // import { Hero } from "@/components/sections/hero"
 import HeroCarousel from "@/components/sections/hero-carrusel"
-import MentalHealthServices from "@/components/sections/services"
+import HomeCareServices from "@/components/sections/services"
 // import Servi from "@/components/sections/services"
 // import { Testimonials } from "@/components/sections/testimonials"
 // import { CtaSection } from "@/components/sections/cta"
@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       {/* <Hero /> */}
       <HeroCarousel />
-      <MentalHealthServices />
+      <HomeCareServices />
       <AboutSection />
       {/* <Testimonials />
       <CtaSection /> */}

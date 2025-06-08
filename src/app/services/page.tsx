@@ -1,11 +1,11 @@
-import MentalHealthServices from "@/components/sections/services";
+import HomeCareServices from "@/components/sections/services"
+
 
 
 const ServicesPage = () => {
   return (
-    <>
-      <MentalHealthServices />
-    </>
+
+    <HomeCareServices />
   );
 };
 
