@@ -92,12 +92,16 @@ const HeroCarousel = () => {
                     <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
                       {slide.title}
                     </h2>
-                    <p className="text-xl md:text-2xl mb-6 text-black-600">
-                      {slide.subtitle}
-                    </p>
-                    <p className="text-lg mb-8 max-w-2xl mx-auto text-black-700">
-                      {slide.hook}
-                    </p>
+                    <div className="bg-[rgba(255,255,255,0.25)] md:bg-[rgba(255,255,255,0.45)] rounded-2xl">
+                      <p className="text-xl md:text-2xl mb-6 text-black  px-5 ">
+                        {slide.subtitle}
+                      </p>
+                    </div>
+                    <div className="bg-[rgba(255,255,255,0.25)] md:bg-[rgba(255,255,255,0.45)] rounded-2xl">
+                      <p className="text-lg mb-8 max-w-2xl mx-auto text-black">
+                        {slide.hook}
+                      </p>
+                    </div>
                     {/* <Button
                       size="lg"
                       className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
