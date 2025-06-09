@@ -133,7 +133,7 @@ const HomeCareServices = () => {
               </div>
             </div>
             
-            <div className="md:w-1/2 grid grid-cols-2 gap-4">
+            <div className="md:w-1/2 grid lg:grid-cols-2 gap-4">
               <div className="bg-blue-50 p-4 rounded-lg flex items-center">
                 <ShoppingBag className="w-6 h-6 text-blue-600 mr-3" />
                 <span className="font-medium">Compras y Recados</span>
