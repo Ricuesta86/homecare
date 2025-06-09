@@ -21,7 +21,7 @@ const HeroCarousel = () => {
       id: 1,
       title: "Evaluación Clínica Profesional de Salud Mental",
       subtitle:
-        "Obtén un diagnóstico preciso y un plan de tratamiento personalizado desde la comodidad de tu hogar",
+        "Diagnóstico preciso y plan de tratamiento personalizado desde la comodidad de tu hogar",
       cta: "Agendar Evaluación",
       link: "/evaluacion-clinica",
       image: "/images/mental-evaluation.jpg",
