@@ -30,7 +30,7 @@ const ContactSection = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("/api/send-email", {
+      const response = await fetch("/api/emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,6 +39,8 @@ const ContactSection = () => {
       });
 
       const result = await response.json();
+
+      console.log("first")
 
       if (response.ok) {
         setSubmitStatus({
