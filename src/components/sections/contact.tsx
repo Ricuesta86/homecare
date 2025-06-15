@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { MapPin, FileText, Phone, Mail, Clock, User } from 'lucide-react';
-import { useForm } from 'react-hook-form';
+import { MapPin, FileText, Phone, Mail, Clock, User } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 type FormData = {
   name: string;
@@ -12,13 +13,60 @@ type FormData = {
 };
 
 const ContactSection = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
 
-  const onSubmit = (data: FormData) => {
-    // Aquí puedes manejar el envío del formulario
-    console.log(data);
-    // Ejemplo: enviar a API o correo electrónico
-    alert('Gracias por contactarnos. Nos pondremos en contacto contigo pronto.');
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      console.log("first")
+
+      if (response.ok) {
+        setSubmitStatus({
+          success: true,
+          message:
+            "¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.",
+        });
+        reset();
+      } else {
+        setSubmitStatus({
+          success: false,
+          message:
+            result.message ||
+            "Error al enviar el mensaje. Por favor intenta nuevamente.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        success: false,
+        message:
+          `Error de conexión. Por favor verifica tu conexión e intenta nuevamente. ${error}`,
+          
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -31,7 +79,8 @@ const ContactSection = () => {
               Contáctenos
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Estamos aquí para ayudarte. Ponte en contacto con nosotros para más información sobre nuestros servicios de cuidado en el hogar.
+              Estamos aquí para ayudarte. Ponte en contacto con nosotros para
+              más información sobre nuestros servicios de cuidado en el hogar.
             </p>
 
             <div className="space-y-6">
@@ -41,8 +90,12 @@ const ContactSection = () => {
                   <MapPin className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Dirección</h3>
-                  <p className="text-gray-600">7619 Coot St, Orlando, FL 32822</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Dirección
+                  </h3>
+                  <p className="text-gray-600">
+                    7619 Coot St, Orlando, FL 32822
+                  </p>
                 </div>
               </div>
 
@@ -52,10 +105,14 @@ const ContactSection = () => {
                   <FileText className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Licencias y Certificaciones</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Licencias y Certificaciones
+                  </h3>
                   <p className="text-gray-600 mb-1">Archivo: 39975098</p>
                   <p className="text-gray-600">Licencia: 239234</p>
-                  <p className="text-gray-600 mt-2">Tipo de Proveedor: Homemaker and Companion</p>
+                  <p className="text-gray-600 mt-2">
+                    Tipo de Proveedor: Homemaker and Companion
+                  </p>
                 </div>
               </div>
 
@@ -65,7 +122,9 @@ const ContactSection = () => {
                   <Phone className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Teléfonos</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Teléfonos
+                  </h3>
                   <p className="text-gray-600 mb-1">(786) 238-5632</p>
                   <p className="text-gray-600">(689) 302-5799</p>
                 </div>
@@ -77,7 +136,9 @@ const ContactSection = () => {
                   <Mail className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Correo Electrónico</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Correo Electrónico
+                  </h3>
                   <p className="text-gray-600">latinangelshomecare@gmail.com</p>
                 </div>
               </div>
@@ -88,8 +149,12 @@ const ContactSection = () => {
                   <Clock className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Horario de Atención</h3>
-                  <p className="text-gray-600">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    Horario de Atención
+                  </h3>
+                  <p className="text-gray-600">
+                    Lunes a Viernes: 8:00 AM - 6:00 PM
+                  </p>
                   <p className="text-gray-600">Sábados: 9:00 AM - 2:00 PM</p>
                   <p className="text-gray-600">Emergencias: 24/7</p>
                 </div>
@@ -99,11 +164,28 @@ const ContactSection = () => {
 
           {/* Formulario de contacto */}
           <div className="bg-gray-50 rounded-xl p-8 md:p-10 shadow-sm">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h3>
-            
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              Envíanos un mensaje
+            </h3>
+
+            {submitStatus && (
+              <div
+                className={`mb-6 p-4 rounded-lg ${
+                  submitStatus.success
+                    ? "bg-green-100 text-green-800"
+                    : "bg-red-100 text-red-800"
+                }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
+
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Nombre Completo
                 </label>
                 <div className="relative">
@@ -113,43 +195,59 @@ const ContactSection = () => {
                   <input
                     id="name"
                     type="text"
-                    {...register('name', { required: 'Este campo es requerido' })}
+                    {...register("name", {
+                      required: "Este campo es requerido",
+                    })}
                     className="pl-10 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
                     placeholder="Tu nombre"
                   />
                 </div>
-                {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
+                {errors.name && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Correo Electrónico
                   </label>
                   <input
                     id="email"
                     type="email"
-                    {...register('email', { 
-                      required: 'Este campo es requerido',
+                    {...register("email", {
+                      required: "Este campo es requerido",
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: 'Correo electrónico no válido'
-                      }
+                        message: "Correo electrónico no válido",
+                      },
                     })}
                     className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
                     placeholder="tu@email.com"
                   />
-                  {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Teléfono
                   </label>
                   <input
                     id="phone"
                     type="tel"
-                    {...register('phone')}
+                    {...register("phone")}
                     className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
                     placeholder="(123) 456-7890"
                   />
@@ -157,12 +255,15 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="service"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Servicio de Interés
                 </label>
                 <select
                   id="service"
-                  {...register('service')}
+                  {...register("service")}
                   className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
                 >
                   <option value="">Selecciona un servicio</option>
@@ -175,25 +276,37 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Mensaje
                 </label>
                 <textarea
                   id="message"
                   rows={4}
-                  {...register('message', { required: 'Este campo es requerido' })}
+                  {...register("message", {
+                    required: "Este campo es requerido",
+                  })}
                   className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
                   placeholder="Cuéntanos cómo podemos ayudarte"
                 ></textarea>
-                {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg"
+                  disabled={isSubmitting}
+                  className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg ${
+                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
                 >
-                  Enviar Mensaje
+                  {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                 </button>
               </div>
             </form>
