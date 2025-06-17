@@ -7,13 +7,17 @@ export async function POST(request: Request) {
 
   const sender = {
     name: "Latin Angles",
-    address: "ricuesta1986@gmail.com",
+    address: "latinangelshomecare@gmail.com",
   };
   const receipients = [
     {
       name,
       address:email
     },
+    {
+    name: "Latin Angles",
+    address: "ricuesta1986@gmail.com",
+  },
   ];
 
   try {
