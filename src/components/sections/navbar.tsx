@@ -58,10 +58,11 @@ const Navbar = () => {
             >
               <Image
                 priority
-                src={latinAngels}
+                src={'/logo.png'}
                 alt="Latin Angels"
-                height={40}
-                width={40}
+                height={50}
+                width={50}
+                className="rounded-full"
               />
               <span className="ml-2 text-2xl font-bold text-blue-800">
                 Latin Angels
