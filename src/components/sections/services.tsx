@@ -119,9 +119,9 @@ const HomeCareServices = () => {
         <div className="bg-white rounded-xl shadow-md p-8 md:p-10">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Servimos en Orlando, FL y áreas cercanas</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Servimos en Polk Country FL y áreas cercanas</h3>
               <p className="text-gray-600 mb-6">
-                Nuestros servicios están diseñados para brindar apoyo a familias y permitir que sus seres queridos envejezcan con dignidad en el lugar que más aman: su hogar.
+                Nuestros servicios están diseñados para brindar apoyo emocional para que cuiden su mente y su vida, a individuos, parejas, grupos y familia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">

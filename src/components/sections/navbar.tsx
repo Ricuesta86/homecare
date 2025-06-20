@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import latinAngels from "../../../public/latin-angels1.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
