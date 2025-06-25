@@ -8,7 +8,6 @@ import {
   Users,
   ShieldCheck,
   Star,
-  Eye,
   Rocket,
   ScanHeart,
   Handshake,
@@ -115,8 +114,14 @@ const AboutUsSection = () => {
         {/* Visión */}
         <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-16">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/3 bg-purple-50 p-6 rounded-full flex items-center justify-center">
-              <Eye className="w-12 h-12 text-blue-600" />
+            <div className="w-full md:w-1/3 relative h-64 md:h-80">
+              <Image
+                src="/images/about.jpg"
+                alt="Equipo de Latin Angels for Homecare"
+                fill
+                className="object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
             </div>
             <div className="md:w-2/3">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center">
@@ -223,7 +228,8 @@ const AboutUsSection = () => {
                 </h4>
               </div>
               <p className="text-gray-600">
-                Buscamos la mejora continua en nuestros servicios, apoyándonos en la evidencia científica y la formación constante.
+                Buscamos la mejora continua en nuestros servicios, apoyándonos
+                en la evidencia científica y la formación constante.
               </p>
             </div>
 
@@ -236,7 +242,8 @@ const AboutUsSection = () => {
                 </h4>
               </div>
               <p className="text-gray-600">
-                Promovemos entornos seguros y equitativos, donde todas las personas sean valoradas y apoyadas sin discriminación
+                Promovemos entornos seguros y equitativos, donde todas las
+                personas sean valoradas y apoyadas sin discriminación
               </p>
             </div>
 
@@ -249,7 +256,9 @@ const AboutUsSection = () => {
                 </h4>
               </div>
               <p className="text-gray-600">
-                Fomentamos el trabajo en equipo entre profesionales, familias y comunidades para lograr mejores resultados, equilibrando la esencia personal.
+                Fomentamos el trabajo en equipo entre profesionales, familias y
+                comunidades para lograr mejores resultados, equilibrando la
+                esencia personal.
               </p>
             </div>
           </div>
