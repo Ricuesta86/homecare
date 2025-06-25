@@ -45,7 +45,7 @@ const AboutUsSection = () => {
           {/* Imagen */}
           <div className="relative h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/images/about.jpg" // Reemplaza con tu imagen
+              src="/images/terapia.webp" // Reemplaza con tu imagen
               alt="Equipo de atención médica a domicilio"
               fill
               className="object-cover"
@@ -114,16 +114,16 @@ const AboutUsSection = () => {
         {/* Visión */}
         <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-16">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-1/3 relative h-64 md:h-80">
+            <div className="w-full lg:w-1/2 relative h-64 md:h-80">
               <Image
-                src="/images/about.jpg"
+                src="/images/terapia3.webp"
                 alt="Equipo de Latin Angels for Homecare"
                 fill
                 className="object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
-            <div className="md:w-2/3">
+            <div className="w-full lg:w-1/2">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center">
                 <Rocket className="w-8 h-8 text-blue-600 mr-3" />
                 Nuestra Visión
