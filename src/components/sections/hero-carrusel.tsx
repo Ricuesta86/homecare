@@ -88,8 +88,8 @@ const HeroCarousel = () => {
                 <div className="absolute inset-0  bg-opacity-50" />
 
                 <div className="relative z-10 flex items-center justify-center h-full">
-                  <div className="text-center text-black max-w-4xl mx-auto px-4">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
+                  <div className="text-center text-black max-w-4xl mx-auto px-4 bg-[rgba(255,255,255,0.25)] md:bg-[rgba(255,255,255,0.45)] rounded-2xl">
+                    <h2 className="text-4xl md:text-6xl font-bold mb-4 mt-4 animate-fade-in">
                       {slide.title}
                     </h2>
                     <div className="bg-[rgba(255,255,255,0.25)] md:bg-[rgba(255,255,255,0.45)] rounded-2xl">
