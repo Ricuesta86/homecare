@@ -10,6 +10,8 @@ import {
   Star,
   Eye,
   Rocket,
+  ScanHeart,
+  Handshake,
 } from "lucide-react";
 
 const AboutUsSection = () => {
@@ -228,7 +230,7 @@ const AboutUsSection = () => {
             {/* Inclusión */}
             <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
               <div className="flex items-center mb-4">
-                <Eye className="w-6 h-6 text-blue-600 mr-3" />
+                <ScanHeart className="w-6 h-6 text-blue-600 mr-3" />
                 <h4 className="text-xl font-semibold text-gray-800">
                   Inclusión
                 </h4>
@@ -241,7 +243,7 @@ const AboutUsSection = () => {
             {/* Colaboración */}
             <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
               <div className="flex items-center mb-4">
-                <Rocket className="w-6 h-6 text-blue-600 mr-3" />
+                <Handshake className="w-6 h-6 text-blue-600 mr-3" />
                 <h4 className="text-xl font-semibold text-gray-800">
                   Colaboración
                 </h4>
