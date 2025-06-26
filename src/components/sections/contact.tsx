@@ -125,8 +125,8 @@ const ContactSection = () => {
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">
                     Teléfonos
                   </h3>
-                  <p className="text-gray-600 mb-1">(786) 238-5632</p>
-                  <p className="text-gray-600">(689) 302-5799</p>
+                  <p className="text-gray-600 mb-1">(407) 385 3470</p>
+                  <p className="text-gray-600">(786) 238-5632</p>
                 </div>
               </div>
 
@@ -153,10 +153,9 @@ const ContactSection = () => {
                     Horario de Atención
                   </h3>
                   <p className="text-gray-600">
-                    Lunes a Viernes: 8:00 AM - 6:00 PM
+                    Lunes a Viernes: 9:00 AM - 4:00 PM
                   </p>
                   <p className="text-gray-600">Sábados: 9:00 AM - 2:00 PM</p>
-                  <p className="text-gray-600">Emergencias: 24/7</p>
                 </div>
               </div>
             </div>
