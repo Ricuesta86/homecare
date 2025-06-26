@@ -1,69 +1,85 @@
-'use client';
+"use client";
 
-import { Home, Heart, Users, Shield, ShoppingBag, Dog, BookOpen, Utensils } from 'lucide-react';
+import {
+  Home,
+  Heart,
+  Users,
+  Shield,
+  ShoppingBag,
+  Dog,
+  BookOpen,
+  Utensils,
+} from "lucide-react";
 
 const HomeCareServices = () => {
   const services = [
     {
-      title: "Servicio de Ama de Casa",
+      title: "Terapia Individual",
       icon: <Home className="w-8 h-8 text-blue-600" />,
-      description: "Ofrecemos un hogar coordinado y limpio, garantizando un ambiente agradable y organizado.",
+      description: "Ofrecemos el servicio vía Telesalud en casa y oficina.",
       features: [
-        "Limpieza ligera del hogar",
-        "Lavandería y planchado",
-        "Cambios de ropa de cama",
-        "Paseo de mascotas",
-        "Organización de correspondencia",
-        "Preparación y organización de habitaciones",
-        "Compras y recados"
+        "Atención personalizada",
+        "Espacio seguro y confidencial",
+        "Apoyo y enfoque en objetivos específicos",
       ],
-      benefits: "Previene el aislamiento que sienten muchas personas mayores que viven solas."
+      benefits: [
+        "Mejora la salud mental",
+        "Mayor autoconciencia",
+        "Resolución de conflictos emocionales",
+      ],
     },
     {
-      title: "Compañerismo",
+      title: "Terapia de Grupo",
       icon: <Heart className="w-8 h-8 text-purple-600" />,
-      description: "Conversación y compañía significativa para mejorar el bienestar emocional y cognitivo.",
+      description:
+        "Ofrecemos el servicio vía Telesalud en casa, comunidad y oficina.",
       features: [
-        "Conversación estimulante",
-        "Juegos de mesa (cartas, bingo)",
-        "Lectura en voz alta",
-        "Acompañamiento en paseos",
-        "Asistencia a eventos sociales",
-        "Actividades artísticas",
-        "Acompañamiento a restaurantes"
+        "Interacción grupal",
+        "Apoyo social",
+        "Diversidad de perspectiva",
+        "Desarrollo de habilidades sociales.",
       ],
-      benefits: "Estimula el bienestar cerebral y emocional a través de interacciones significativas."
+      benefits: [
+        "Mejora de la motivación y constancia.",
+        "Sentimiento de pertenencia social.",
+        "Reduccion de estrés y ansiedad.",
+      ],
     },
     {
-      title: "Apoyos Personales",
+      title: "Terapia de Pareja",
       icon: <Users className="w-8 h-8 text-teal-600" />,
-      description: "Asistencia profesional en actividades de la vida diaria para mayor independencia.",
+      description:
+        "Ofrecemos el servicio vía Telesalud en casa, comunidad y oficina.",
       features: [
-        "Asistencia con baño y aseo",
-        "Ayuda para vestirse",
-        "Preparación de comidas",
-        "Supervisión de medicamentos",
-        "Asistencia con movilidad",
-        "Acompañamiento médico",
-        "Controles de seguridad en el hogar"
+        "Identificación de patrones disfuncionales.",
+        "Resolución de Conflictos",
+        "Fomento de la Empatia y la comprensión mutua.",
       ],
-      benefits: "Permite a los adultos mayores y personas con discapacidad permanecer en sus hogares con seguridad."
+      benefits: [
+        "Mejora la comunicación",
+        "Fortalece la intimidad",
+        "Prevee problemas futuros",
+        "Aumenta la satisfacción de la relación",
+      ],
     },
     {
-      title: "Cuidado Especializado",
+      title: "Terapia de Familia",
       icon: <Shield className="w-8 h-8 text-orange-600" />,
-      description: "Atención profesional para necesidades específicas de salud.",
+      description:
+        "Ofrecemos el servicio vía Telesalud en casa, comunidad y oficina.",
       features: [
-        "Cuidado de Alzheimer/Demencia",
-        "Cuidado de relevo (para familiares)",
-        "Monitoreo de salud continuo",
-        "Gestión de medicamentos",
-        "Atención post-hospitalización",
-        "Cuidado paliativo",
-        "Asistencia con terapias"
+        "Identificación de patrones disfuncionales.",
+        "Resolución de Conflictos",
+        "Fomento de la Empatia y la comprensión mutua.",
       ],
-      benefits: "Proporciona tranquilidad a familias y cuidado especializado cuando más se necesita."
-    }
+      benefits: [
+        "Mejora la comunicación",
+        "Reduce estrés",
+        "Apoya bienestar emocional",
+        "Fomenta Resiliencia",
+        "Ambiente familiar mas agradable.",
+      ],
+    },
   ];
 
   return (
@@ -75,40 +91,78 @@ const HomeCareServices = () => {
             Nuestros Servicios
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Atención Integral desde el Hogar <span className="text-blue-600">en Orlando, FL</span>
+            Atención Integral desde el Hogar{" "}
+            <span className="text-blue-600">en Orlando, FL</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Latin Angels for Homecare Inc. brinda servicios personalizados que permiten a los adultos mayores vivir con seguridad y comodidad en sus hogares.
+            Latin Angels for Homecare Inc. brinda servicios personalizados que
+            permiten a los adultos mayores vivir con seguridad y comodidad en
+            sus hogares.
           </p>
         </div>
 
         {/* Servicios */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col"
+            >
               <div className="p-6 flex-grow">
                 <div className="bg-blue-50 p-3 rounded-full inline-flex mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                
+
                 <h4 className="font-semibold text-gray-800 mb-2">Incluye:</h4>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
-                      <svg className="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                       <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              
+
               <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
                 <p className="text-sm font-medium text-gray-700">
-                  <span className="font-semibold">Beneficio clave:</span> {service.benefits}
+                  <span className="font-semibold">Beneficio clave:</span>{" "}
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <svg
+                          className="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </p>
               </div>
             </div>
@@ -119,9 +173,13 @@ const HomeCareServices = () => {
         <div className="bg-white rounded-xl shadow-md p-8 md:p-10">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Servimos en Polk Country FL y áreas cercanas</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Servimos en Polk Country FL y áreas cercanas
+              </h3>
               <p className="text-gray-600 mb-6">
-                Nuestros servicios están diseñados para brindar apoyo emocional para que cuiden su mente y su vida, a individuos, parejas, grupos y familia.
+                Nuestros servicios están diseñados para brindar apoyo emocional
+                para que cuiden su mente y su vida, a individuos, parejas,
+                grupos y familia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
@@ -132,7 +190,7 @@ const HomeCareServices = () => {
                 </button>
               </div>
             </div>
-            
+
             <div className="md:w-1/2 grid lg:grid-cols-2 gap-4">
               <div className="bg-blue-50 p-4 rounded-lg flex items-center">
                 <ShoppingBag className="w-6 h-6 text-blue-600 mr-3" />
