@@ -91,13 +91,16 @@ const HomeCareServices = () => {
             Nuestros Servicios
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Atención Integral desde el Hogar{" "}
-            <span className="text-blue-600">en Orlando, FL</span>
+            Atencion integral desde la Oficina, Telesalud o en el Hogar{" "}
+            <span className="text-blue-600">
+              en Polk County, FL, Orlando, Fl, Hillsborough, Fl
+            </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Latin Angels for Homecare Inc. brinda servicios personalizados que
-            permiten a los adultos mayores vivir con seguridad y comodidad en
-            sus hogares.
+            Latin Angels For Homecare LLC. Brinda servicios personalizados que
+            permiten a los niños de 6-18 años, jóvenes de 19-35 años, adultos
+            jóvenes de 36-55 años y a los adultos mayores a vivir con seguridad,
+            con buena salud mental en sus hogares.
           </p>
         </div>
 
