@@ -32,7 +32,8 @@ const HomeCareServices = () => {
       title: "Terapia de Grupo",
       icon: <Heart className="w-8 h-8 text-purple-600" />,
       description:
-        "Ofrecemos el servicio vía Telesalud en casa, comunidad y oficina.",
+        `Ofrecemos el servicio vía Telesalud en casa, comunidad y oficina.
+        `,
       features: [
         "Interacción grupal",
         "Apoyo social",
@@ -147,7 +148,7 @@ const HomeCareServices = () => {
                 <p className="text-sm font-medium text-gray-700">
                   <span className="font-semibold">Beneficio clave:</span>{" "}
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, i) => (
+                    {service.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start">
                         <svg
                           className="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
@@ -162,7 +163,7 @@ const HomeCareServices = () => {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <span className="text-gray-700 text-sm">{feature}</span>
+                        <span className="text-gray-700 text-sm">{benefit}</span>
                       </li>
                     ))}
                   </ul>
