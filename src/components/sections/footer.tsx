@@ -83,27 +83,22 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="hover:text-blue-200 transition">
-                  Cuidado de Ancianos
+                  Terapia Individual
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-blue-200 transition">
-                  Asistencia Médica
+                  Terapia de Grupo
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-blue-200 transition">
-                  Cuidado Postoperatorio
+                  Terapia de Pareja
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-blue-200 transition">
-                  Acompañamiento
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-blue-200 transition">
-                  Servicios de Enfermería
+                  Terapia de Familia
                 </Link>
               </li>
             </ul>
@@ -121,12 +116,12 @@ export function Footer() {
               <p className="mb-2 flex gap-1">
                 {/* <i className="fas fa-phone mr-2"></i> */}
                 <Phone />
-                (786) 238-5632
+                (407) 385 3470
               </p>
               <p className="mb-2 flex gap-1">
                 {/* <i className="fas fa-phone mr-2"></i> */}
                 <Phone />
-                (689) 302-5799
+                (786) 238-5632
               </p>
               <p className="mb-2 flex gap-1">
                 {/* <i className="fas fa-envelope mr-2"></i>
@@ -137,7 +132,15 @@ export function Footer() {
               <p className="mb-2 flex gap-1">
                 {/* <i className="fas fa-clock mr-2"></i> */}
                 <Clock />
-                24/7 Disponible
+                <div className="text-sm">
+                  Lunes a Viernes:
+                  <br></br>
+                   9:00 AM - 4:00 PM 
+                  <br></br>
+                  Sábados: 
+                  <br></br>
+                  9:00 AM - 2:00 PM
+                </div>
               </p>
             </address>
           </div>
