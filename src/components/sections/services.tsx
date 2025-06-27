@@ -149,7 +149,7 @@ const HomeCareServices = () => {
               </div>
 
               <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 md:h-48 lg:h-55">
-                <p className="text-sm font-medium text-gray-700">
+                <div className="text-sm font-medium text-gray-700">
                   <span className="font-semibold">Beneficio clave:</span>{" "}
                   <ul className="space-y-2 mb-6">
                     {service.benefits.map((benefit, i) => (
@@ -171,7 +171,7 @@ const HomeCareServices = () => {
                       </li>
                     ))}
                   </ul>
-                </p>
+                </div>
               </div>
             </div>
           ))}
