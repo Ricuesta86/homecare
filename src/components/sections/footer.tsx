@@ -137,9 +137,9 @@ export function Footer() {
                   <br></br>
                    9:00 AM - 4:00 PM 
                   <br></br>
-                  Sábados: 
+                  {/* Sábados: 
                   <br></br>
-                  9:00 AM - 2:00 PM
+                  9:00 AM - 2:00 PM */}
                 </div>
               </p>
             </address>

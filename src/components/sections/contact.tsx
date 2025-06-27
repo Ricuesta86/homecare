@@ -155,7 +155,7 @@ const ContactSection = () => {
                   <p className="text-gray-600">
                     Lunes a Viernes: 9:00 AM - 4:00 PM
                   </p>
-                  <p className="text-gray-600">Sábados: 9:00 AM - 2:00 PM</p>
+                  {/* <p className="text-gray-600">Sábados: 9:00 AM - 2:00 PM</p> */}
                 </div>
               </div>
             </div>
