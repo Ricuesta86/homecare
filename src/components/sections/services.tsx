@@ -148,7 +148,7 @@ const HomeCareServices = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 lg:h-55">
+              <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 md:h-48 lg:h-55">
                 <p className="text-sm font-medium text-gray-700">
                   <span className="font-semibold">Beneficio clave:</span>{" "}
                   <ul className="space-y-2 mb-6">
