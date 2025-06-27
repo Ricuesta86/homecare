@@ -40,7 +40,7 @@ const ContactSection = () => {
 
       const result = await response.json();
 
-      console.log("first")
+      console.log("first");
 
       if (response.ok) {
         setSubmitStatus({
@@ -60,9 +60,7 @@ const ContactSection = () => {
     } catch (error) {
       setSubmitStatus({
         success: false,
-        message:
-          `Error de conexión. Por favor verifica tu conexión e intenta nuevamente. ${error}`,
-          
+        message: `Error de conexión. Por favor verifica tu conexión e intenta nuevamente. ${error}`,
       });
     } finally {
       setIsSubmitting(false);
@@ -216,19 +214,24 @@ const ContactSection = () => {
                   >
                     Correo Electrónico
                   </label>
-                  <input
-                    id="email"
-                    type="email"
-                    {...register("email", {
-                      required: "Este campo es requerido",
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "Correo electrónico no válido",
-                      },
-                    })}
-                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
-                    placeholder="tu@email.com"
-                  />
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Mail className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      id="email"
+                      type="email"
+                      {...register("email", {
+                        required: "Este campo es requerido",
+                        pattern: {
+                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                          message: "Correo electrónico no válido",
+                        },
+                      })}
+                      className="pl-10 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
                   {errors.email && (
                     <p className="mt-1 text-sm text-red-600">
                       {errors.email.message}
@@ -243,13 +246,18 @@ const ContactSection = () => {
                   >
                     Teléfono
                   </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    {...register("phone")}
-                    className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
-                    placeholder="(123) 456-7890"
-                  />
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <Phone className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      id="phone"
+                      type="tel"
+                      {...register("phone")}
+                      className="pl-10 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
+                      placeholder="(123) 456-7890"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -263,14 +271,13 @@ const ContactSection = () => {
                 <select
                   id="service"
                   {...register("service")}
-                  className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
+                  className="pl-3 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
                 >
                   <option value="">Selecciona un servicio</option>
-                  <option value="homemaker">Ama de Casa</option>
-                  <option value="companion">Compañerismo</option>
-                  <option value="personal-care">Apoyos Personales</option>
-                  <option value="specialized">Cuidado Especializado</option>
-                  <option value="other">Otro</option>
+                  <option value="Terapia Individual">Terapia Individual</option>
+                  <option value="Terapia de Grupo">Terapia de Grupo</option>
+                  <option value="Terapia de Pareja">Terapia de Pareja</option>
+                  <option value="terapia_de_familia">Terapia de Familia</option>
                 </select>
               </div>
 
@@ -287,7 +294,7 @@ const ContactSection = () => {
                   {...register("message", {
                     required: "Este campo es requerido",
                   })}
-                  className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
+                  className="pl-3 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3"
                   placeholder="Cuéntanos cómo podemos ayudarte"
                 ></textarea>
                 {errors.message && (
