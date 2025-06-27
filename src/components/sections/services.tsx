@@ -16,7 +16,7 @@ const HomeCareServices = () => {
     {
       title: "Terapia Individual",
       icon: <Home className="w-8 h-8 text-blue-600" />,
-      description: "Ofrecemos el servicio vía Telesalud en casa y oficina.",
+      description: `Ofrecemos el servicio vía Telesalud en casa y oficina.`,
       features: [
         "Atención personalizada",
         "Espacio seguro y confidencial",
@@ -115,35 +115,40 @@ const HomeCareServices = () => {
                 <div className="bg-blue-50 p-3 rounded-full inline-flex mb-4">
                   {service.icon}
                 </div>
+                {/* <h3 className="text-xl font-bold text-gray-900 mb-3 md:h-8 lg:h-14"> */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-gray-600 mb-4 lg:h-20">
+                  {service.description}
+                </p>
 
-                <h4 className="font-semibold text-gray-800 mb-2">Incluye:</h4>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <svg
-                        className="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="lg:h-40">
+                  <h4 className="font-semibold text-gray-800 mb-2">Incluye:</h4>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <svg
+                          className="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+              <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 lg:h-55">
                 <p className="text-sm font-medium text-gray-700">
                   <span className="font-semibold">Beneficio clave:</span>{" "}
                   <ul className="space-y-2 mb-6">
@@ -209,9 +214,7 @@ const HomeCareServices = () => {
               </div>
               <div className="bg-orange-50 p-4 rounded-lg flex items-center">
                 <TextSearch className="w-6 h-6 text-orange-600 mr-3" />
-                <span className="font-medium">
-                  Identificación de patrones
-                </span>
+                <span className="font-medium">Identificación de patrones</span>
               </div>
             </div>
           </div>
