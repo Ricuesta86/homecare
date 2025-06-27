@@ -132,7 +132,7 @@ export function Footer() {
               <p className="mb-2 flex gap-1">
                 {/* <i className="fas fa-clock mr-2"></i> */}
                 <Clock />
-                <div className="text-sm">
+                <div >
                   Lunes a Viernes:
                   <br></br>
                    9:00 AM - 4:00 PM 

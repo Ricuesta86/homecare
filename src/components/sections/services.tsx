@@ -5,10 +5,10 @@ import {
   Heart,
   Users,
   Shield,
-  ShoppingBag,
-  Dog,
-  BookOpen,
-  Utensils,
+  MessageCircleWarning,
+  HandHeart,
+  FilePenLine,
+  TextSearch,
 } from "lucide-react";
 
 const HomeCareServices = () => {
@@ -31,8 +31,7 @@ const HomeCareServices = () => {
     {
       title: "Terapia de Grupo",
       icon: <Heart className="w-8 h-8 text-purple-600" />,
-      description:
-        `Ofrecemos el servicio vía Telesalud en casa, comunidad y oficina.
+      description: `Ofrecemos el servicio vía Telesalud en casa, comunidad y oficina.
         `,
       features: [
         "Interacción grupal",
@@ -197,20 +196,22 @@ const HomeCareServices = () => {
 
             <div className="md:w-1/2 grid lg:grid-cols-2 gap-4">
               <div className="bg-blue-50 p-4 rounded-lg flex items-center">
-                <ShoppingBag className="w-6 h-6 text-blue-600 mr-3" />
-                <span className="font-medium">Compras y Recados</span>
+                <MessageCircleWarning className="w-6 h-6 text-blue-600 mr-3" />
+                <span className="font-medium">Atención personalizada</span>
               </div>
               <div className="bg-purple-50 p-4 rounded-lg flex items-center">
-                <Dog className="w-6 h-6 text-purple-600 mr-3" />
-                <span className="font-medium">Cuidado de Mascotas</span>
+                <HandHeart className="w-6 h-6 text-purple-600 mr-3" />
+                <span className="font-medium">Apoyo social</span>
               </div>
               <div className="bg-teal-50 p-4 rounded-lg flex items-center">
-                <BookOpen className="w-6 h-6 text-teal-600 mr-3" />
-                <span className="font-medium">Compañía y Lectura</span>
+                <FilePenLine className="w-6 h-6 text-teal-600 mr-3" />
+                <span className="font-medium">Resolución de Conflictos</span>
               </div>
               <div className="bg-orange-50 p-4 rounded-lg flex items-center">
-                <Utensils className="w-6 h-6 text-orange-600 mr-3" />
-                <span className="font-medium">Preparación de Comidas</span>
+                <TextSearch className="w-6 h-6 text-orange-600 mr-3" />
+                <span className="font-medium">
+                  Identificación de patrones
+                </span>
               </div>
             </div>
           </div>
