@@ -23,7 +23,7 @@ const AboutUsSection = () => {
             Nuestra Misión
           </span>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-            En Latín Àngels For Homecare LLC, nuestra misión es brindar
+            En <span className="text-blue-600 italic">Latín Angels For Homecare LLC,</span> nuestra misión es brindar
             servicios de salud mental Domiciliaria, en la oficina o Telesalud,
             con compasión, dignidad y respeto, enfocados en mejorar la calidad
             de vida de cada individuo, grupo, pareja y familia.
@@ -106,7 +106,7 @@ const AboutUsSection = () => {
             Cuidado Compasivo en la Comodidad de tu Hogar
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            En Latin Angels for Homecare LLC, combinamos profesionalismo con
+            En <span className="text-blue-600 font-bold italic">Latin Angels For Homecare LLC,</span> combinamos profesionalismo con
             calidez humana para transformar vidas.
           </p>
         </div>
@@ -117,7 +117,7 @@ const AboutUsSection = () => {
             <div className="w-full lg:w-1/2 relative h-64 md:h-80">
               <Image
                 src="/images/terapia3.webp"
-                alt="Equipo de Latin Angels for Homecare"
+                alt="Equipo de Latin Angels For Homecare LLC"
                 fill
                 className="object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -130,7 +130,7 @@ const AboutUsSection = () => {
               </h3>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  En <strong>Latin Angels for Homecare LLC</strong>, aspiramos a
+                  En <span className=" italic"><strong>Latin Angels For Homecare LLC</strong></span>, aspiramos a
                   ser líderes reconocidos en la provisión de servicios de salud
                   mental en el hogar y telesalud, destacándonos por la calidad
                   humana, la innovación terapéutica y el impacto positivo en la

@@ -97,7 +97,7 @@ const HomeCareServices = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Latin Angels For Homecare LLC. Brinda servicios personalizados que
+            <span className="text-blue-600 font-bold italic">Latin Angels For Homecare LLC.</span> Brinda servicios personalizados que
             permiten a los niños de 6-18 años, jóvenes de 19-35 años, adultos
             jóvenes de 36-55 años y a los adultos mayores a vivir con seguridad,
             con buena salud mental en sus hogares.

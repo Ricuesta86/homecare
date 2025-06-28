@@ -36,7 +36,7 @@ export async function POST(request: Request) {
       <p><strong>Mensaje:</strong></p>
       <p>${message}</p>
       <hr>
-      <p>Este mensaje fue enviado desde el formulario de contacto de Latin Angels Homecare.</p>
+      <p>Este mensaje fue enviado desde el formulario de contacto de Latin Angels For Homecare LLC.</p>
     `,
     });
     // console.log(result)

@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Columna 1 - Información */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Latin Angels</h3>
+            <h3 className="text-lg font-bold mb-4">Latin Angels For Homecare LLC</h3>
             <p className="mb-4">
               Brindamos cuidado profesional y compasivo en la comodidad de su
               hogar.
@@ -146,7 +146,7 @@ export function Footer() {
 
         <div className="border-t border-blue-700 mt-8 pt-6 text-center">
           <p>
-            &copy; {currentYear} Latin Angels for HomeCare. Todos los derechos
+            &copy; {currentYear} <span className="italic">Latin Angels For HomeCare LLC.</span> Todos los derechos
             reservados.
           </p>
           <div className="mt-2 text-sm">
