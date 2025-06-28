@@ -26,7 +26,7 @@ const HeroCarousel = () => {
       link: "/evaluacion-clinica",
       image: "/images/mental-evaluation.jpg",
       bgColor: "bg-blue-50",
-      hook: "¿Preocupado por tu bienestar emocional? Nuestros psiquiatras certificados te ayudarán a entender lo que sucede.",
+      hook: "¿Preocupado por tu bienestar emocional? Nuestros terapeutas certificados te ayudarán a entender lo que sucede.",
     },
     {
       id: 2,
