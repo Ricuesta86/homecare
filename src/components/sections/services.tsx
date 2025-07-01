@@ -10,6 +10,7 @@ import {
   FilePenLine,
   TextSearch,
 } from "lucide-react";
+import Link from "next/link";
 
 const HomeCareServices = () => {
   const services = [
@@ -190,12 +191,12 @@ const HomeCareServices = () => {
                 grupos y familia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                <Link href={"contacto"} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
                   Contactar Ahora
-                </button>
-                <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition duration-300">
+                </Link>
+                <Link href={'maps'} className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition duration-300">
                   Ver Áreas de Cobertura
-                </button>
+                </Link>
               </div>
             </div>
 
