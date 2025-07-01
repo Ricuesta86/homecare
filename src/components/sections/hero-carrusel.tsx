@@ -115,8 +115,8 @@ const HeroCarousel = () => {
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="left-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
-        <CarouselNext className="right-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
+        <CarouselPrevious className="left-4 bg-white/20 border-black/30 text-black hover:bg-white/30" />
+        <CarouselNext className="right-4 bg-white/20 border-black/30 text-black font-bold hover:bg-white/30" />
       </Carousel>
 
       {/* Indicadores */}

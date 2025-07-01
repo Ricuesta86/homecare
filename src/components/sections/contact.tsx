@@ -109,7 +109,7 @@ const ContactSection = () => {
                   <p className="text-gray-600 mb-1">Archivo: 39975098</p>
                   <p className="text-gray-600">Licencia: 239234</p>
                   <p className="text-gray-600 mt-2">
-                    Tipo de Proveedor: Homemaker and Companion
+                    Tipo de Proveedor: Servicios de Salud mental.
                   </p>
                 </div>
               </div>
